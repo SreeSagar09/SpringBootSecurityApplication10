@@ -1,0 +1,42 @@
+A Program to show how to configure spring security with SecurityFilterChain interface, method level role based authentication:
+Programs:
+* SpringBootSecurityApplication10Application.java
+* CustomUserDetails.java
+* JwtTokenValidationFilter.java
+* SecurityConfiguration.java
+* UserAuthenticationController.java
+* UserController.java
+* UsersDTO.java
+* Users.java
+* UsersRepository.java
+* UserAuthenticationService.java
+* UserAuthenticationServiceImpl.java
+* UserDetailsServiceImpl.java
+* UserService.java
+* UserServiceImpl.java
+* CommonUtil.java
+* JWTServiceUtil.java
+Notes:
+* If we use hasRole, hasAnyRole methods then role must start with ROLE_*, for example ROLE_Admin, ROLE_User.
+* If we use hasAuthority, hasAnyAuthority methods then role is actual role.
+Output:
+From main method in SpringBootSecurityApplication9Application class.
+
+Sql Queries:
+CREATE TABLE `users` (
+	`user_id` INT(10) NOT NULL AUTO_INCREMENT,
+	`user_name` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`raw_password` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`enc_password` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`first_name` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`last_name` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`address` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`created_date` TIMESTAMP NOT NULL,
+	`updated_date` TIMESTAMP NOT NULL,
+	`role` VARCHAR(100) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	PRIMARY KEY (`user_id`) USING BTREE,
+	UNIQUE INDEX `Index 2` (`user_name`) USING BTREE
+)
+COLLATE='utf8mb4_0900_ai_ci'
+ENGINE=InnoDB
+;

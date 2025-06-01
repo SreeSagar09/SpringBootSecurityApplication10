@@ -1,0 +1,1 @@
+A Program to show how to configure spring security with SecurityFilterChain interface, method level role based authentication:
