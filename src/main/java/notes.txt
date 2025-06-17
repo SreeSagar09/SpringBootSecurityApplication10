@@ -20,7 +20,7 @@ Notes:
 * If we use hasRole, hasAnyRole methods then role must start with ROLE_*, for example ROLE_Admin, ROLE_User.
 * If we use hasAuthority, hasAnyAuthority methods then role is actual role.
 Output:
-From main method in SpringBootSecurityApplication9Application class.
+From main method in SpringBootSecurityApplication10Application class.
 
 Sql Queries:
 CREATE TABLE `users` (
